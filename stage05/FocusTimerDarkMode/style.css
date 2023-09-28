@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bgColor: #E5E5E5;
+  --timerColor: #323238;
+  --musicBtnBg: #c8c8ce;
+  --svgColor: #323238;
+  --selectedBg: #02799D;
+  --selectedSvg: #FFFFFF;
+}
+
+.darkMode {
+  --bgColor: #121214;
+  --timerColor: #FFFFFF;
+  --musicBtnBg: #29292E;
+  --svgColor: #C4C4CC;
+  --selectedBg: #0A3442;
+  --selectedSvg: #FFFFFF;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: var(--bgColor);
+  font-size: 1.6rem;
+}
+
+.unselectedTheme{
+  visibility: hidden;
+}
+
+.themeIcon svg{ 
+  position: absolute;
+
+  top: 6.4rem;
+  right: 6.4rem;
+
+  cursor: pointer;
+}
+
+main {
+  margin: 0 auto;
+  width: 80rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.timer {
+  font-family: "Roboto", sans-serif;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: var(--timerColor);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.controlPanel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlPanel button {
+  border: none;
+  background: var(--bgColor);
+}
+
+.controlPanel button svg path {
+  fill: var(--timerColor);
+}
+
+.musicControlPanel {
+  display: grid;
+  grid-template-areas: 'a b'
+  'c d';
+  gap: 3.2rem;
+}
+
+.btnCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 13.8rem;
+  height: 15.2rem;
+
+  background-color: var(--musicBtnBg);
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+.selected .btnCard{
+  background-color: var(--selectedBg);
+}
+
+.btnCard svg path {
+  fill: var(--svgColor);
+}
+
+.selected svg path {
+  fill: var(--selectedSvg);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  background: var(--svgColor);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--svgColor);
+}

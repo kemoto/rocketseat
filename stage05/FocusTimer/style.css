@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+
+  background: #E5E5E5;
+  font-size: 1.6rem;
+}
+
+main {
+  width: clamp(40rem, 60rem + 10vw, 82.1rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.timerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.timer {
+  font-family: "Roboto", sans-serif;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: #323238;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.controlPanel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlPanel button {
+  border: none;
+  background: #E5E5E5;
+}
+
+.musicControlPanel {
+  display: grid;
+  grid-template-areas: 'a b'
+  'c d';
+  gap: 3.2rem;
+}
+
+.musicControlPanel button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  background: #c8c8ce;
+  border-radius: 2.4rem;
+}
+
+
+.musicControlPanel .selected {
+  background: #02799D;
+}
+
+.selected svg path {
+  fill:white
+}
